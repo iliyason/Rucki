@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block DopElementsNavBar %}
+    <a onclick="scrollToDivAssort()">Услуги</a>
+    <a onclick="scrollToDivFooter()">Контакты</a>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+      <img src="{{ url_for('static', filename='img/BG.jpg') }}" alt="Изображение">
+      <div class="headerblock">
+          <div class="text-block">
+              <p>Ручной труд или ручная работа - это физическая работа, выполняемая людьми, в отличие от труда машин и рабочих животных. Это в буквальном смысле работа, выполняемая руками, и, в переносном смысле, это работа, выполняемая с любыми мышцами и костями человеческого тела.</p>
+          </div>
+      </div>
+      </div>
+
+<hr>
+    <h2 class="title" id = "assort">Предложения:</h2>
+    <div class="product-cards" >
+        <div class="product-card" onmouseover="showDescription('description1')" onmouseout="hideDescription('description1')" onclick="window.location.href='m.html'">
+            <img src="https://sun9-80.userapi.com/impg/zqOgW6nYN7zHtXwm5eRC2BwHjFEX5zmSzWl77w/1lENxR72YaY.jpg?size=810x1080&quality=95&sign=bf3e605f04a93bebc19a864a23896adb&type=album" alt="Image 1">
+            <h2>Мыло</h2>
+            <p>Цена: от $800</p>
+            <p class="product-description" id="description1">Очень красивое мыло.</p>
+        </div>
+
+        <div class="product-card" onmouseover="showDescription('description2')" onmouseout="hideDescription('description2')" onclick="window.location.href='b.html'">
+            <img src="https://sun9-20.userapi.com/impg/eB8qjNCdhrcBxPe3lQIcZXvIxXJcF5sI0Us28Q/tQHbD52xXto.jpg?size=810x1080&quality=95&sign=4376302f94a2ad2798415d89fc365aa5&type=album" alt="Image 2">
+            <h2>Бомбочки</h2>
+            <p>Цена: от $1000</p>
+            <p class="product-description" id="description2">Очень бомбовые бомбочки.</p>
+        </div>
+
+        <div class="product-card" onmouseover="showDescription('description3')" onmouseout="hideDescription('description3')"onclick="window.location.href='s.html'">
+            <img src="https://sun9-62.userapi.com/impg/Iu9B1TGrgr6FmPW6XVrUEyioBHVsHM2ozr9jSA/8KlyCU2_7sA.jpg?size=810x1080&quality=95&sign=aa81cbef9eb92e97b4de2773d23dd731&type=album" alt="Image 3">
+            <h2>Морская соль</h2>
+            <p>Цена: от $350</p>
+            <p class="product-description" id="description3">Очень солёная соль.</p>
+        </div>
+      </div>
+
+      <hr>
+      <h2 class="title">Наши изделия:</h2>
+      <div class="collage">
+        <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Photo 1" class="small">
+        <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="Photo 2" class="medium">
+        <img src="{{ url_for('static', filename='img/3.jpg') }}" alt="Photo 3" class="small">
+        <img src="{{ url_for('static', filename='img/4.jpg') }}" alt="Photo 4" class="large">
+        <img src="{{ url_for('static', filename='img/5.jpg') }}" alt="Photo 5" class="medium">
+        <img src="{{ url_for('static', filename='img/6.jpg') }}" alt="Photo 6" class="small">
+        <img src="{{ url_for('static', filename='img/7.jpg') }}" alt="Photo 7" class="large">
+        <img src="{{ url_for('static', filename='img/8.jpg') }}" alt="Photo 8" class="small">
+        <img src="{{ url_for('static', filename='img/9.jpg') }}" alt="Photo 9" class="medium">
+        <img src="{{ url_for('static', filename='img/10.jpg') }}" alt="Photo 10" class="small">
+        <img src="{{ url_for('static', filename='img/11.jpg') }}" alt="Photo 11" class="large">
+        <img src="{{ url_for('static', filename='img/12.jpg') }}" alt="Photo 12" class="medium">
+      </div>
+{% endblock %}
